@@ -1,16 +1,22 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-
-ruby '2.1.0'
+ruby '2.0.0'
 gem 'sinatra'
+gem 'rack'
 
 gem 'contentful'
+gem 'haml'
+gem 'redcarpet'
+gem 'redis'
 
 group :development do
   gem 'guard'
   gem 'guard-rspec', require: false
   gem 'rb-fsevent'
+  gem 'awesome_print'
+  gem 'pry-plus'
+  gem 'dotenv'
 end
 
 group :test do
@@ -19,6 +25,6 @@ group :test do
   gem 'rack-test'
 end
 
-group :deploy do
-  gem 'a9s'
+group :production do
+  gem 'puma'
 end

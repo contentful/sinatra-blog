@@ -1,0 +1,34 @@
+%html
+  %title Contentful.com
+  %link{href: "/css/pure-min.css", rel: "stylesheet"}/
+  %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+  %link{href: "/css/main-grid.css", rel: "stylesheet"}/
+  %link{href: "/css/blog.css", rel: "stylesheet"}/
+  %body
+    %div{id: 'layout', class: 'pure-g'}
+      .sidebar.pure-u-1.pure-u-med-1-4
+        .header
+          %hgroup
+            %h1.brand-title
+              %a{href: '/'} A Sample Blog
+            %h2.brand-tagline Creating a blog layout using Pure, Sinatra and Contentful
+          %nav.nav
+            %ul.nav-list
+              %li.nav-item
+                %a.pure-button{href: "https://github.com/contentful/sinatra-blog"} Github
+      .content.pure-u-1.pure-u-med-3-4
+        %div
+          .posts
+            %h1.content-subhead Such Content
+
+            = yield
+
+          .footer
+            .pure-menu.pure-menu-horizontal.pure-menu-open
+              %ul
+                %li
+                  %a{href: "https://www.contentful.com/"} Contentful.com
+                %li
+                  %a{href: "http://twitter.com/contentfulapp/"} Twitter
+                %li
+                  %a{href: "http://github.com/contentful/"} GitHub

@@ -3,7 +3,21 @@ require 'rubygems'
 require 'bundler/setup'
 Bundler.require
 $LOAD_PATH << 'lib'
-#require 'your_models'
+require 'blog_post'
+require 'blog_fetcher'
 require 'pry'
+require 'awesome_print'
+
+require 'dotenv'
+Dotenv.load
+
+
+$redis = Redis.new
+
+@client = Contentful::Client.new(
+                                 access_token:ENV['ACCESS_TOKEN'],
+                                 space: ENV['SPACE'],
+                                 dynamic_entries: :auto
+                                )
 
 Pry::CLI.parse_options
