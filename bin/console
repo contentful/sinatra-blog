@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'bundler/setup'
+Bundler.require
+$LOAD_PATH << 'lib'
+#require 'your_models'
+require 'pry'
+
+Pry::CLI.parse_options
