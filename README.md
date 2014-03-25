@@ -1,4 +1,4 @@
-# Sample Sinatra Application using the https://www.contentful.com Delivery API
+# Sample Sinatra Application using the contentful.com Delivery API
 
 Contentful is a CMS as a Service and allows you to create your own platforms without building the same backend over and over again.
 
@@ -23,3 +23,13 @@ You need to create a space and a content model to be able to use it.
 
 
 **This code is a showcase on how to use the API and the Ruby library.**
+
+
+## Disclaimer
+
+This project is at proof of concept stage and is built on a best
+effort kind of approach without strict guarantees of correctness.
+
+## License
+
+Copyright (c) 2014 Contentful GmbH - Andreas Tiefenthaler. See LICENSE.txt for further details.
