@@ -22,10 +22,10 @@ After successfully installing the dependencies execute
 You need to create a space and a content model to be able to use it.
 
 
-### BlogPost Content-Type:
+### BlogPost Content-Type
 ![BlogPost](images/BlogPost.png "BlogPost")
 
-### BlogCategory Content-Type:
+### BlogCategory Content-Type
 ![BlogCategory](images/BlogCategory.png "BlogCategory")
 
 
