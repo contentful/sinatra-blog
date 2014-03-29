@@ -22,6 +22,13 @@ After successfully installing the dependencies execute
 You need to create a space and a content model to be able to use it.
 
 
+### BlogPost Content-Type:
+![BlogPost](images/BlogPost.png "BlogPost")
+
+### BlogCategory Content-Type:
+![BlogCategory](images/BlogCategory.png "BlogCategory")
+
+
 **This code is a showcase on how to use the API and the Ruby library.**
 
 
