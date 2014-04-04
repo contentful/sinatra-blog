@@ -63,7 +63,9 @@ class BlogFetcher
   end
 
   def redis_set_id_list(ids)
-    $redis.rpush(:index, ids)
+    ids.each do |id|
+      $redis.rpush(:index, id)
+    end
     $redis.expire(:index, TTL)
   end
 

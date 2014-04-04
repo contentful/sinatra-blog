@@ -11,10 +11,18 @@ end
 require_relative 'lib/blog_fetcher'
 require_relative 'lib/blog_post'
 
-$redis = Redis.new(url:ENV['REDISTOGO_URL'])
-
 class App < Sinatra::Base
+  # https://github.com/cloudfoundry-samples/sinatra-cf-twitter/blob/master/sinatwitter.rb
+  configure do
+    services = JSON.parse(ENV['VCAP_SERVICES'])
+    redis_key = services.keys.select { |svc| svc =~ /redis/i }.first
+    redis = services[redis_key].first['credentials']
+    redis_conf = {:host => redis['hostname'], :port => redis['port'], :password => redis['password']}
+    $redis = Redis.new redis_conf
+  end
 
+
+  use Rack::Logger
   configure do
     set :haml, format: :html5
   end
